@@ -1,15 +1,10 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
-  # Add your routes here
-  get "/" do
-    { message: "Good luck with your project!" }.to_json
-  end
-
   get "/login/:user/:pass" do
+    #this could be a post instead of a get
     user = params[:user]
     pass = params[:pass]
-
     if User.find_by(username: user) == nil
       {message: "Username not found", username: user }.to_json
     else
@@ -34,7 +29,6 @@ class ApplicationController < Sinatra::Base
   end
   
   post "/signup" do
-    #first need to check if username is already registered
     if User.find_by(username: params[:username]) != nil
       {message: "Username is already taken", username: params[:username]}.to_json
     else
@@ -60,13 +54,21 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/create_message" do
-    #post create message
+    new_message = Message.create(
+      user_id: params[:user_id],
+      room_id: params[:room_id],
+      message_text: params[:message_text]
+    )
+    new_message.to_json
+  end
+ 
+  delete "/delete_message/:id" do
+    message = Message.find(params[:id])
+    message.destroy
+    message.to_json
   end
 
- 
-
-  #delete message
-
-  
+  # frontend will need some way to check for a new message from the other members of chat room
+  # or a way to "push" the message from the backend
 
 end
