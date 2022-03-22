@@ -38,6 +38,12 @@ class ApplicationController < Sinatra::Base
     rooms.to_json
   end
 
+  get "/room/:id" do
+    room_id = params[:id].to_i
+    room = Room.find(room_id)
+    room.to_json
+  end
+
   post "/create_room" do
     if Room.find_by(room_name: params[:room_name]) != nil
       {message: "Room already exists", room_name: params[:room_name]}.to_json
@@ -54,6 +60,7 @@ class ApplicationController < Sinatra::Base
   # These are Message actions, which live in MessageRoom
   get "/room/:id/messages" do
     #check if room is locked to new users?
+    # how would I send this combined with the Name of the user, rather than the user id?
     room_id = params[:id].to_i
     messages = Message.where(room_id: room_id)
     messages.to_json
