@@ -16,7 +16,6 @@ require "pry"
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
-  # These are Login actions, which will live in App
   post "/login" do
     username = params[:username]
     password = params[:password]
@@ -31,6 +30,7 @@ class ApplicationController < Sinatra::Base
     end    
   end
 
+  # creates a new user and logs them in
   post "/signup" do
     if User.find_by(username: params[:username])
       {message: "Username is already taken", username: params[:username], id: 0 }.to_json
@@ -43,21 +43,20 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-
-  # These are Room actions, which live in RoomSelect
-  #gets all the rooms
+  # gets all the rooms
   get "/rooms" do
     rooms = Room.all
     rooms.to_json
   end
 
-  #gets a single room containing this id#
+  # gets a single room with this id
   get "/rooms/:id" do
     room_id = params[:id].to_i
     room = Room.find(room_id)
     room.to_json
   end
 
+  # creates a new room
   post "/rooms" do
     if Room.find_by(room_name: params[:room_name]) != nil
       {message: "Room already exists", room_name: params[:room_name]}.to_json
@@ -70,15 +69,13 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  # get the users for a particular room (without sharing passwords)
+  # gets the users for a single room (without sending passwords)
   get "/rooms/:id/users" do
     users = Room.find(params[:id].to_i).users.distinct.select(:id, :username)
     users.to_json
   end
 
-
-  # These are Message actions, which live in MessageRoom
-  #this gets all the messages of a particular room
+  # gets all the messages for a single room
   get "/rooms/:id/messages" do
     #check if room is locked to new users?
     # how would I send this combined with the Name of the user, rather than the user id?
@@ -87,6 +84,7 @@ class ApplicationController < Sinatra::Base
     messages.to_json
   end
   
+  # creates a new message in a room
   post "/rooms/:id/messages" do
     room_id = params[:id].to_i
     new_message = Message.create(
@@ -97,14 +95,11 @@ class ApplicationController < Sinatra::Base
     new_message.to_json
   end
  
-  delete "/rooms/:id/messages/:message_id" do
-    message = Message.find(params[:message_id].to_i)
+  # deletes a single message
+  delete "/messages/:id" do
+    message = Message.find( params[:id].to_i )
     message.destroy
     message.to_json
   end
 
 end
-
-  # frontend will need some way to check for a new message from the other members of chat room
-  # seems like it should just check (get request) every 5 seconds or something
-  # or a way to "push" the message from the backend - not sure if this is possible
