@@ -1,26 +1,38 @@
 require "pry"
 
+# get /rooms - get all rooms
+# get /rooms/id - get a specific room
+
+# get /rooms/new - make a new room (frontend route)
+# post /rooms    - create a new room (backend route)
+
+# get /rooms/id/edit - edit a specific room (frontend route)
+# patch /rooms/id  - edit a specific room (backend route)
+
+# delete /rooms/id - delete a specific room
+
+
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # These are Login actions, which will live in App
-  get "/login/:user/:pass" do
-    #this could be a post instead of a get - everything could be a post
-    user = params[:user]
-    pass = params[:pass]
-    if User.find_by(username: user) == nil
-      {message: "Username not found", username: user, id: 0 }.to_json
-    else
-      if pass == User.find_by(username: user).password
-        {message: "Authorized", username: user, id: User.find_by(username: user).id }.to_json
+  post "/login" do
+    username = params[:username]
+    password = params[:password]
+    if User.find_by(username: username)
+      if password == User.find_by(username: username).password
+        {message: "Authorized", username: username, id: User.find_by(username: username).id }.to_json
       else
-        {message: "Incorrect password", username: user, id: 0 }.to_json
+        {message: "Incorrect password", username: username, id: 0 }.to_json
       end 
+    else
+      {message: "Username not found", username: username, id: 0 }.to_json
     end    
   end
 
   post "/signup" do
-    if User.find_by(username: params[:username]) != nil
+    if User.find_by(username: params[:username])
       {message: "Username is already taken", username: params[:username], id: 0 }.to_json
     else
       new_user = User.create(
@@ -33,18 +45,20 @@ class ApplicationController < Sinatra::Base
 
 
   # These are Room actions, which live in RoomSelect
+  #gets all the rooms
   get "/rooms" do
     rooms = Room.all
     rooms.to_json
   end
 
-  get "/room/:id" do
+  #gets a single room containing this id#
+  get "/rooms/:id" do
     room_id = params[:id].to_i
     room = Room.find(room_id)
     room.to_json
   end
 
-  post "/create_room" do
+  post "/rooms" do
     if Room.find_by(room_name: params[:room_name]) != nil
       {message: "Room already exists", room_name: params[:room_name]}.to_json
     else
@@ -56,27 +70,35 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  # get the users for a particular room (without sharing passwords)
+  get "/rooms/:id/users" do
+    users = Room.find(params[:id].to_i).users.distinct.select(:id, :username)
+    users.to_json
+  end
+
 
   # These are Message actions, which live in MessageRoom
-  get "/room/:id/messages" do
+  #this gets all the messages of a particular room
+  get "/rooms/:id/messages" do
     #check if room is locked to new users?
     # how would I send this combined with the Name of the user, rather than the user id?
     room_id = params[:id].to_i
-    messages = Message.where(room_id: room_id)
+    messages = Room.find(room_id).messages
     messages.to_json
   end
   
-  post "/create_message" do
+  post "/rooms/:id/messages" do
+    room_id = params[:id].to_i
     new_message = Message.create(
       user_id: params[:user_id],
-      room_id: params[:room_id],
+      room_id: room_id,
       message_text: params[:message_text]
     )
     new_message.to_json
   end
  
-  delete "/delete_message/:id" do
-    message = Message.find(params[:id])
+  delete "/rooms/:id/messages/:message_id" do
+    message = Message.find(params[:message_id].to_i)
     message.destroy
     message.to_json
   end
