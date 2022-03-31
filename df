@@ -1,0 +1,116 @@
+=> {[31m[1;31m"[0m[31massociation[1;31m"[0m[31m[0m=>
+  [32m#<ActiveRecord::Associations::HasManyAssociation:0x0000563880446330[0m
+   @association_ids[32m=[0m[1;36mnil[0m,
+   @association_scope[32m=[0m
+    [[32m#<Message:0x00005638807bcfa0[0m id: [1;34m1[0m, user_id: [1;34m1[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x00005638807bced8[0m id: [1;34m2[0m, user_id: [1;34m4[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x00005638807bce10[0m id: [1;34m3[0m, user_id: [1;34m3[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x00005638807bcd48[0m id: [1;34m4[0m, user_id: [1;34m2[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x00005638807bcc80[0m id: [1;34m43[0m, user_id: [1;34m9[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHi all, I'm new here[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x00005638807bcbb8[0m
+      id: [1;34m44[0m,
+      user_id: [1;34m9[0m,
+      room_id: [1;34m1[0m,
+      message_text: [31m[1;31m"[0m[31mWhen did everyone get in touch?[1;31m"[0m[31m[0m,
+      created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m,
+      updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m[32m>[0m],
+   @inversed[32m=[0m[1;36mfalse[0m,
+   @loaded[32m=[0m[1;36mtrue[0m,
+   @owner[32m=[0m[32m#<Room:0x00005638804463a8[0m id: [1;34m1[0m, room_name: [31m[1;31m"[0m[31mGeneral[1;31m"[0m[31m[0m, room_detail: [31m[1;31m"[0m[31mA place to discuss everything[1;31m"[0m[31m[0m, locked: [1;34m0[0m[32m>[0m,
+   @proxy[32m=[0m
+    [[32m#<Message:0x000056387fd1c3c0[0m id: [1;34m1[0m, user_id: [1;34m1[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fed0[0m id: [1;34m2[0m, user_id: [1;34m4[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fd68[0m id: [1;34m3[0m, user_id: [1;34m3[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fc00[0m id: [1;34m4[0m, user_id: [1;34m2[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fa98[0m id: [1;34m43[0m, user_id: [1;34m9[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHi all, I'm new here[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044f930[0m
+      id: [1;34m44[0m,
+      user_id: [1;34m9[0m,
+      room_id: [1;34m1[0m,
+      message_text: [31m[1;31m"[0m[31mWhen did everyone get in touch?[1;31m"[0m[31m[0m,
+      created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m,
+      updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m[32m>[0m],
+   @reflection[32m=[0m
+    [32m#<ActiveRecord::Reflection::HasManyReflection:0x000056387fd98740[0m
+     @active_record[32m=[0mRoom([35mid[0m: integer, [35mroom_name[0m: string, [35mroom_detail[0m: string, [35mlocked[0m: integer),
+     @active_record_primary_key[32m=[0m[31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m,
+     @class_name[32m=[0m[31m[1;31m"[0m[31mMessage[1;31m"[0m[31m[0m,
+     @constructable[32m=[0m[1;36mtrue[0m,
+     @foreign_key[32m=[0m[31m[1;31m"[0m[31mroom_id[1;31m"[0m[31m[0m,
+     @inverse_name[32m=[0m[33m:room[0m,
+     @inverse_of[32m=[0m
+      [32m#<ActiveRecord::Reflection::BelongsToReflection:0x000056387fdca808[0m
+       @active_record[32m=[0mMessage([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime),
+       @class_name[32m=[0m[31m[1;31m"[0m[31mRoom[1;31m"[0m[31m[0m,
+       @constructable[32m=[0m[1;36mtrue[0m,
+       @foreign_key[32m=[0m[31m[1;31m"[0m[31mroom_id[1;31m"[0m[31m[0m,
+       @inverse_name[32m=[0m[1;36mnil[0m,
+       @klass[32m=[0mRoom([35mid[0m: integer, [35mroom_name[0m: string, [35mroom_detail[0m: string, [35mlocked[0m: integer),
+       @name[32m=[0m[33m:room[0m,
+       @options[32m=[0m{},
+       @plural_name[32m=[0m[31m[1;31m"[0m[31mrooms[1;31m"[0m[31m[0m,
+       @scope[32m=[0m[1;36mnil[0m[32m>[0m,
+     @klass[32m=[0mMessage([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime),
+     @name[32m=[0m[33m:messages[0m,
+     @options[32m=[0m{},
+     @plural_name[32m=[0m[31m[1;31m"[0m[31mmessages[1;31m"[0m[31m[0m,
+     @scope[32m=[0m[1;36mnil[0m[32m>[0m,
+   @stale_state[32m=[0m[1;36mnil[0m,
+   @target[32m=[0m
+    [[32m#<Message:0x000056387fd1c3c0[0m id: [1;34m1[0m, user_id: [1;34m1[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fed0[0m id: [1;34m2[0m, user_id: [1;34m4[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fd68[0m id: [1;34m3[0m, user_id: [1;34m3[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fc00[0m id: [1;34m4[0m, user_id: [1;34m2[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044fa98[0m id: [1;34m43[0m, user_id: [1;34m9[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHi all, I'm new here[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m[32m>[0m,
+     [32m#<Message:0x000056388044f930[0m
+      id: [1;34m44[0m,
+      user_id: [1;34m9[0m,
+      room_id: [1;34m1[0m,
+      message_text: [31m[1;31m"[0m[31mWhen did everyone get in touch?[1;31m"[0m[31m[0m,
+      created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m,
+      updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m[32m>[0m][32m>[0m,
+ [31m[1;31m"[0m[31mklass[1;31m"[0m[31m[0m=>Message([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime),
+ [31m[1;31m"[0m[31mtable[1;31m"[0m[31m[0m=>
+  [32m#<Arel::Table:0x000056387f94ea40[0m
+   @klass[32m=[0mMessage([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime),
+   @name[32m=[0m[31m[1;31m"[0m[31mmessages[1;31m"[0m[31m[0m,
+   @table_alias[32m=[0m[1;36mnil[0m,
+   @type_caster[32m=[0m
+    [32m#<ActiveRecord::TypeCaster::Map:0x000056387f94ea18[0m @klass[32m=[0mMessage([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime)[32m>[0m[32m>[0m,
+ [31m[1;31m"[0m[31mvalues[1;31m"[0m[31m[0m=>{},
+ [31m[1;31m"[0m[31mloaded[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+ [31m[1;31m"[0m[31mpredicate_builder[1;31m"[0m[31m[0m=>
+  [32m#<ActiveRecord::PredicateBuilder:0x000056387f94e9c8[0m
+   @handlers[32m=[0m
+    [[[1;34;4mSet[0m, [32m#<ActiveRecord::PredicateBuilder::ArrayHandler:0x000056387f94e838[0m @predicate_builder[32m=[0m[32m#<ActiveRecord::PredicateBuilder:0x000056387f94e9c8[0m ...[32m>[0m[32m>[0m],
+     [[1;34;4mArray[0m, [32m#<ActiveRecord::PredicateBuilder::ArrayHandler:0x000056387f94e888[0m @predicate_builder[32m=[0m[32m#<ActiveRecord::PredicateBuilder:0x000056387f94e9c8[0m ...[32m>[0m[32m>[0m],
+     [[1;34;4mActiveRecord[0m::[1;34;4mRelation[0m, [32m#<ActiveRecord::PredicateBuilder::RelationHandler:0x000056387f94e8d8[0m[32m>[0m],
+     [[1;34;4mRange[0m, [32m#<ActiveRecord::PredicateBuilder::RangeHandler:0x000056387f94e928[0m @predicate_builder[32m=[0m[32m#<ActiveRecord::PredicateBuilder:0x000056387f94e9c8[0m ...[32m>[0m[32m>[0m],
+     [[1;34;4mBasicObject[0m, [32m#<ActiveRecord::PredicateBuilder::BasicObjectHandler:0x000056387f94e978[0m @predicate_builder[32m=[0m[32m#<ActiveRecord::PredicateBuilder:0x000056387f94e9c8[0m ...[32m>[0m[32m>[0m]],
+   @table[32m=[0m
+    [32m#<ActiveRecord::TableMetadata:0x000056387f94e9f0[0m
+     @arel_table[32m=[0m
+      [32m#<Arel::Table:0x000056387f94ea40[0m
+       @klass[32m=[0mMessage([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime),
+       @name[32m=[0m[31m[1;31m"[0m[31mmessages[1;31m"[0m[31m[0m,
+       @table_alias[32m=[0m[1;36mnil[0m,
+       @type_caster[32m=[0m
+        [32m#<ActiveRecord::TypeCaster::Map:0x000056387f94ea18[0m @klass[32m=[0mMessage([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime)[32m>[0m[32m>[0m,
+     @klass[32m=[0mMessage([35mid[0m: integer, [35muser_id[0m: integer, [35mroom_id[0m: integer, [35mmessage_text[0m: string, [35mcreated_at[0m: datetime, [35mupdated_at[0m: datetime),
+     @reflection[32m=[0m[1;36mnil[0m[32m>[0m[32m>[0m,
+ [31m[1;31m"[0m[31mdelegate_to_klass[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+ [31m[1;31m"[0m[31mtake[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+ [31m[1;31m"[0m[31moffsets[1;31m"[0m[31m[0m=>[1;36mnil[0m,
+ [31m[1;31m"[0m[31mscope[1;31m"[0m[31m[0m=>
+  [[32m#<Message:0x000056387fde95f0[0m id: [1;34m1[0m, user_id: [1;34m1[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.956742[0m [1;34;4mUTC[0m[32m>[0m,
+   [32m#<Message:0x000056387fde9320[0m id: [1;34m2[0m, user_id: [1;34m4[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.967183[0m [1;34;4mUTC[0m[32m>[0m,
+   [32m#<Message:0x000056387fde8e70[0m id: [1;34m3[0m, user_id: [1;34m3[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHows it going?[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.976617[0m [1;34;4mUTC[0m[32m>[0m,
+   [32m#<Message:0x000056387fde8ab0[0m id: [1;34m4[0m, user_id: [1;34m2[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHello[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m23[0m [1;34m04[0m:[1;34m11[0m:[1;35m49.986123[0m [1;34;4mUTC[0m[32m>[0m,
+   [32m#<Message:0x000056387fde8100[0m id: [1;34m43[0m, user_id: [1;34m9[0m, room_id: [1;34m1[0m, message_text: [31m[1;31m"[0m[31mHi all, I'm new here[1;31m"[0m[31m[0m, created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m, updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m37.217489[0m [1;34;4mUTC[0m[32m>[0m,
+   [32m#<Message:0x000056387fddfac8[0m
+    id: [1;34m44[0m,
+    user_id: [1;34m9[0m,
+    room_id: [1;34m1[0m,
+    message_text: [31m[1;31m"[0m[31mWhen did everyone get in touch?[1;31m"[0m[31m[0m,
+    created_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m,
+    updated_at: [1;34m2022[0m-[1;34m03[0m-[1;34m28[0m [1;34m17[0m:[1;34m37[0m:[1;35m56.13084[0m [1;34;4mUTC[0m[32m>[0m]}

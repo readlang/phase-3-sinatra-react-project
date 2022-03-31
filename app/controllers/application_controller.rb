@@ -79,11 +79,52 @@ class ApplicationController < Sinatra::Base
   get "/rooms/:id/messages" do
     #check if room is locked to new users?
     # how would I send this combined with the Name of the user, rather than the user id?
-    room_id = params[:id].to_i
-    messages = Room.find(room_id).messages
+    
+    messages = Room.find( params[:id].to_i ).messages
     messages.to_json
   end
   
+  # Experimental - gets all the messages for a single room with the usernames
+  get "/rooms/:id/messageswuser" do
+    users = Room.find(params[:id].to_i).users.select(:id, :username)
+    messages = Room.find( params[:id].to_i ).messages
+
+    array = []
+    messages.length.times do |i|
+      array.push( 
+        { 
+          id: messages[i].id,
+          user_id: messages[i].user_id,
+          room_id: messages[i].room_id,
+          message_text: messages[i].message_text,
+          created_at: messages[i].created_at,
+          updated_at: messages[i].updated_at,
+          username: users[i].username
+        }
+      )
+    end
+
+    return ( array.to_json ) 
+  end
+
+  # Experimental - gets all the messages for a single room with the usernames
+  get "/rooms/:id/messageswuser2" do
+    users = Room.find(params[:id].to_i).users.select(:id, :username)
+    messages = Room.find( params[:id].to_i ).messages
+
+    array = []
+    
+    messages.length.times do |i| 
+      array.push( { 
+        **messages[i].attributes,
+        username: users[i].username
+      } )
+    end
+
+    return ( array.to_json ) 
+  end
+
+
   # creates a new message in a room
   post "/rooms/:id/messages" do
     room_id = params[:id].to_i
