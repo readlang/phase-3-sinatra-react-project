@@ -1,18 +1,5 @@
 require "pry"
 
-# get /rooms - get all rooms
-# get /rooms/id - get a specific room
-
-# get /rooms/new - make a new room (frontend route)
-# post /rooms    - create a new room (backend route)
-
-# get /rooms/id/edit - edit a specific room (frontend route)
-# patch /rooms/id  - edit a specific room (backend route)
-
-# delete /rooms/id - delete a specific room
-
-
-
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
@@ -51,8 +38,7 @@ class ApplicationController < Sinatra::Base
 
   # gets a single room with this id
   get "/rooms/:id" do
-    room_id = params[:id].to_i
-    room = Room.find(room_id)
+    room = Room.find( params[:id].to_i )
     room.to_json
   end
 
@@ -77,60 +63,15 @@ class ApplicationController < Sinatra::Base
 
   # gets all the messages for a single room
   get "/rooms/:id/messages" do
-    #check if room is locked to new users?
-    # how would I send this combined with the Name of the user, rather than the user id?
-    
     messages = Room.find( params[:id].to_i ).messages
     messages.to_json
   end
   
-  # Experimental - gets all the messages for a single room with the usernames
-  get "/rooms/:id/messageswuser" do
-    users = Room.find(params[:id].to_i).users.select(:id, :username)
-    messages = Room.find( params[:id].to_i ).messages
-
-    array = []
-    messages.length.times do |i|
-      array.push( 
-        { 
-          id: messages[i].id,
-          user_id: messages[i].user_id,
-          room_id: messages[i].room_id,
-          message_text: messages[i].message_text,
-          created_at: messages[i].created_at,
-          updated_at: messages[i].updated_at,
-          username: users[i].username
-        }
-      )
-    end
-
-    return ( array.to_json ) 
-  end
-
-  # Experimental - gets all the messages for a single room with the usernames
-  get "/rooms/:id/messageswuser2" do
-    users = Room.find(params[:id].to_i).users.select(:id, :username)
-    messages = Room.find( params[:id].to_i ).messages
-
-    array = []
-    
-    messages.length.times do |i| 
-      array.push( { 
-        **messages[i].attributes,
-        username: users[i].username
-      } )
-    end
-
-    return ( array.to_json ) 
-  end
-
-
   # creates a new message in a room
   post "/rooms/:id/messages" do
-    room_id = params[:id].to_i
     new_message = Message.create(
       user_id: params[:user_id],
-      room_id: room_id,
+      room_id: params[:id].to_i ,
       message_text: params[:message_text]
     )
     new_message.to_json
@@ -142,5 +83,4 @@ class ApplicationController < Sinatra::Base
     message.destroy
     message.to_json
   end
-
 end
